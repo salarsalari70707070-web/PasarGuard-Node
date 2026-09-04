@@ -3,6 +3,7 @@ FROM --platform=$BUILDPLATFORM golang:1.26.2-alpine AS builder
 
 ARG TARGETOS
 ARG TARGETARCH
+ENV GOTOOLCHAIN=auto
 
 RUN apk update && apk add --no-cache make git openssl
 
